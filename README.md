@@ -15,3 +15,8 @@ gallery-dl is designed to be used from the command line - it is possible to impo
 - `pip freeze > requirements.txt` freeze dependencies
 - `pip install -r requirements.txt` install dependencies
 - `deactivate` deactivate venv
+
+## usage
+
+- activate
+- python main

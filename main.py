@@ -19,7 +19,6 @@ def getdirs(gallery_path, dirs):
     dir_path = os.path.join(gallery_path, file)
     if os.path.isdir(dir_path):
       dirs.append(dir_path)
-      print(dir_path)
       getdirs(dir_path, dirs)
 
 def main():
@@ -39,8 +38,8 @@ def main():
   if not args.cull_only:
     # gallery-dl to download from urls
     print("Downloading from list")
-    pass
-    cmd = ['gallery-dl', '-T', '5', '-i', url_file, '--download-archive', archive_file]
+    
+    cmd = ['gallery-dl', '-T', '6', '-i', url_file, '--download-archive', archive_file]
     subprocess.run(cmd, cwd=parent_path, shell=True)
 
   if not args.download_only:
@@ -50,10 +49,8 @@ def main():
     dirs = []
     getdirs(gallery_path, dirs)
     for dir in dirs:
+      print(f"Checking {dir}")
       search = dif(dir, delete=True, silent_del=True)
-  
-  
-    
 
 if __name__ == "__main__":
   main()
