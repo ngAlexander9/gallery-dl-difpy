@@ -1,5 +1,5 @@
 {
   "gallery-dl-parent-path": "",
-  "archivefile": "archfile",
+  "archivefile": "archfile.sqlite3",
   "urlfile": "url-file.txt"
 }
